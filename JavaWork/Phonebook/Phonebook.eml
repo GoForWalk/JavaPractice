@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="JavaSE-1.8">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="ojdbc6_g.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec28_JDBC/libs/ojdbc6_g.jar!/"/>
+	</lib>
+</component>
