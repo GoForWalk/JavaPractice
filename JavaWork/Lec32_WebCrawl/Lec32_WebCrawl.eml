@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jsoup-1.13.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/jsoup-1.13.1.jar!/"/>
+	</lib>
+	<lib name="json-20190722.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/json-20190722.jar!/"/>
+	</lib>
+	<lib name="jackson-databind-2.10.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/jackson-databind-2.10.2.jar!/"/>
+	</lib>
+	<lib name="jackson-core-2.10.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/jackson-core-2.10.2.jar!/"/>
+	</lib>
+	<lib name="jackson-annotations-2.10.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/jackson-annotations-2.10.2.jar!/"/>
+	</lib>
+	<lib name="byte-buddy-1.8.15.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/byte-buddy-1.8.15.jar!/"/>
+	</lib>
+	<lib name="client-combined-3.141.59.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/client-combined-3.141.59.jar!/"/>
+	</lib>
+	<lib name="commons-exec-1.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/commons-exec-1.3.jar!/"/>
+	</lib>
+	<lib name="guava-25.0-jre.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/guava-25.0-jre.jar!/"/>
+	</lib>
+	<lib name="okhttp-3.11.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/okhttp-3.11.0.jar!/"/>
+	</lib>
+	<lib name="okio-1.14.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/JavaWork/Lec32_WebCrawl/libs/okio-1.14.0.jar!/"/>
+	</lib>
+</component>

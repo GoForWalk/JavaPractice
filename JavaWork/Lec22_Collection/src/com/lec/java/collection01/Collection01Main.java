@@ -59,10 +59,22 @@ public class Collection01Main {
 		list1.remove(3);
 		
 		System.out.println("삭제 후");
+		System.out.println("size() : " + list1.size());
 		for (int i = 0; i < list1.size(); i++) {
 			System.out.println(list1.get(i));
 		}
 		System.out.println();
+		
+		// 데이터 삭제: remove(index) 메소드 사용
+		list1.remove(3);
+		
+		System.out.println("삭제 후2");
+		System.out.println("size() : " + list1.size());
+		for (int i = 0; i < list1.size(); i++) {
+			System.out.println(list1.get(i));
+		}
+		System.out.println();
+		
 		// 데이터 수정: set(index, element) 메소드 사용
 		list1.set(2, 333);
 		System.out.println("수정 후");

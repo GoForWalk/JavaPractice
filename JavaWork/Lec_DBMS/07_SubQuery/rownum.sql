@@ -1,0 +1,95 @@
+-- SELECT 결과물중 맨 위의 5개만 출력해보고 싶으면 어케 해야 하나?
+--   ex) 게시판.. 페이징
+
+-- DBMS 마다 구현 방법 다름
+--	MYSQL : LIMIT -> 깔끔쓰
+-- 	MS SQL server : TOP
+
+-- 	ORACLE : ROWNUM **
+
+SELECT empno, ename , sal FROM T_EMP ;
+
+
+-- 자동적으로 오라클에서 붙여주는 행번호 객체 (ROWNUM)
+SELECT ROWNUM, empno, ename , sal FROM T_EMP ;
+
+-- 직원번호 역수느 그러나 ROWNUM 은 1~
+SELECT ROWNUM, empno, ename , sal FROM T_EMP ORDER BY EMPNO DESC ; --ROWNUM 은 고정
+
+-- 상위 5개만!!
+SELECT ROWNUM, empno, ename , sal FROM T_EMP 
+WHERE ROWNUM <= 5
+ORDER BY EMPNO DESC ; 
+
+-- SELECT 에 ROWNUM 없어도 동작
+SELECT empno, ename , sal FROM T_EMP 
+WHERE ROWNUM <= 5
+ORDER BY EMPNO DESC ; -- 이미 존재하는 값이여서 보이지 않아도 사용할 수 있다.
+
+
+-- ROWNUM > 5 ?? 동작하지 않는다. ROWNUM은 1이 포함되지 않으면 잘 동작하지 않는다.
+SELECT empno, ename , sal FROM T_EMP 
+WHERE ROWNUM > 5
+ORDER BY EMPNO DESC ;
+
+-- 상위 5개 출력
+-- row1 ~ row5 까지 출력 (1 page)
+
+SELECT ROWNUM, EMPNO  ,ENAME , SAL 
+FROM T_EMP 
+WHERE ROWNUM >= 1 AND ROWNUM < 1 + 5
+ORDER BY EMPNO DESC ;
+
+-- 2page
+SELECT ROWNUM, EMPNO  ,ENAME , SAL 
+FROM T_EMP 
+WHERE ROWNUM >= 1 AND ROWNUM < 1 + 5
+ORDER BY EMPNO DESC ; -- 안나온다.
+
+
+-- phonebook 뻥튀기 
+SELECT * FROM PHONEBOOK ORDER BY 1;
+
+INSERT INTO PHONEBOOK (SELECT * FROM PHONEBOOK ); -- err primary key 중복!!
+
+INSERT INTO PHONEBOOK 
+	(SELECT phonebook_seq.nextval, PB_NAME , PB_PHONENUM , PB_MEMO , SYSDATE FROM phonebook); -- 뻥튀기!!
+	
+-- ROWNUM rev.
+SELECT  PB_UID, PB_NAME , PB_PHONENUM
+FROM PHONEBOOK 
+ORDER BY PB_UID DESC
+;
+
+
+SELECT ROWNUM AS RNUM, T.*
+FROM (SELECT  PB_UID, PB_NAME , PB_PHONENUM FROM PHONEBOOK ORDER BY PB_UID DESC) T
+;
+
+-- 한페이지당 5개 데이터 출력시
+-- 2번째 페이지
+SELECT * 
+FROM (SELECT ROWNUM AS RNUM, T.*
+FROM (SELECT  PB_UID, PB_NAME , PB_PHONENUM FROM PHONEBOOK ORDER BY PB_UID DESC) T)
+WHERE RNUM >= 6 AND RNUM < 6 + 5;
+
+
+-- 한페이지당 5개 데이터 출력시
+-- 3번째 페이지
+SELECT * 
+FROM (SELECT ROWNUM AS RNUM, T.*
+FROM (SELECT  PB_UID, PB_NAME , PB_PHONENUM FROM PHONEBOOK ORDER BY PB_UID DESC) T)
+WHERE RNUM >= 11 AND RNUM < 11 + 5;
+
+-- 한페이지당 10개 데이터 출력시
+-- 3번째 페이지
+SELECT * 
+FROM (SELECT ROWNUM AS RNUM, T.*
+FROM (SELECT  PB_UID, PB_NAME , PB_PHONENUM FROM PHONEBOOK ORDER BY PB_UID DESC) T)
+WHERE RNUM >= 21 AND RNUM < 21 + 10;
+
+-- prepareStatement 구문!!!
+SELECT * 
+FROM (SELECT ROWNUM AS RNUM, T.*
+FROM (SELECT  PB_UID, PB_NAME , PB_PHONENUM FROM PHONEBOOK ORDER BY PB_UID DESC) T)
+WHERE RNUM >= ? AND RNUM < ? + ?;
