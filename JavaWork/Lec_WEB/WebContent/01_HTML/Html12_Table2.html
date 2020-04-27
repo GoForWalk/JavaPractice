@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+table, th, td {
+    border: 1px solid black;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+
+th, td {
+	padding: 15px;	/* 셀 안쪽의 컨텐트와 border 사이 여백 */
+}
+
+th {
+	text-align: left;
+}
+</style>
+
+
+
+</head>
+<!-- 
+	colspan : 열병합
+	rowspan: 행 병합
+ -->
+<body>
+<table style="width: 100%">
+	<tr>
+		<td>1</td>
+		<td colspan="2">2</td>
+		
+	</tr>
+	<tr>
+		<td rowspan="2">4</td>
+		<td>5</td>
+		<td>6</td>
+	</tr>
+	<tr>
+		<!-- 7번 삭제 -> 4번에서 rowspan -->
+		<td>8</td>
+		<td>9</td>
+	</tr>
+	</table>
+	
+<hr>
+	
+	<table style="width: 100%">
+	<tr>
+		<td rowspan="2" colspan="2">1</td>
+		
+		<td>3</td>
+	</tr>
+	<tr>
+		
+		
+		<td>6</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>8</td>
+		<td>9</td>
+	</tr>
+	
+	
+</table>
+
+<hr>
+	<!-- 배열 갯수가 안맞으면 삐져나간다 -->
+	<table style="width: 100%">
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td colspan="3">4</td>
+		
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>8</td>
+		<td>9</td>
+	</tr>
+	
+	
+</table>
+
+<hr>
+	
+	<table style="width: 100%">
+	<tr>
+		<td>1</td>
+		<td rowspan="2">2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td rowspan="2">4</td>
+		
+		<td>6</td>
+	</tr>
+	<tr>
+		
+		<td>8</td>
+		<td>9</td>
+	</tr>
+	
+	
+</table>
+
+
+
+</body>
+</html>
