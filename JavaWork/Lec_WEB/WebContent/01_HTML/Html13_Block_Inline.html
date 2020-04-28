@@ -29,7 +29,7 @@
 	*** <span> <a> <img> <input> : 이거 4개 외우기!! ***
 
 
-	※ 위 3개 정도만 디폴트가 inline 이고 나머지는 block 이라 생각해도 됨.
+	※ 위 4개 정도만 디폴트가 inline 이고 나머지는 block 이라 생각해도 됨.
 
 
 	background-color 나 border 등을 주면 그 element 가 차지하고 있는 영역이 보인다
@@ -60,24 +60,31 @@
 
 <br>
 <!-- display:block 요소 에는 width, height 가 적용됨 -->
-<div style="background-color: lime; padding: 5px; /* TODO */">
-    div 요소입니다
-    <div style="background-color: yellow;">div안의 div 입니다</div>
-    <div style="background-color: pink;">div안의 div 입니다</div>
-    <div style="background-color: violet;">div안의 div 입니다</div>
+<div style="background-color: lime; padding: 5px; width: 300px; height: 250px;">
+    div 요소입니다(300 * 250)
+    <div style="background-color: yellow; width: 200px; height: 80px">div안의 div 입니다</div>
+    <div style="background-color: pink; width: 170px; height: 70px">div안의 div 입니다</div>
+    <div style="background-color: violet; width: 100px; height: 50px">div안의 div 입니다</div>
 </div>
 
 <br>
-
-<span style="background-color: lime; padding: 5px;">
+<!-- span:  grouping -->
+<span style="background-color: lime; padding: 5px; /* width: 100px; height: 100px; <-- 인라인이여서 적용 안된다 */">
 	span 요소입니다
 	<span style="background-color: yellow;">span안의 span</span>
 </span>
 
+<br><br><br>
+
+
+<div style="background-color: cyan; display:inline"> inline 적용된 div</div>
+
 <br>
+<br>
+<br>
+<span style="background-color: cyan; display:block" > block 적용된 span</span>
 
 
-<!-- TODO -->
 
 
 </body>
