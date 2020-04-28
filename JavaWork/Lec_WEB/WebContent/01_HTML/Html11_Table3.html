@@ -3,10 +3,76 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>테이블 과제</title>
+		<style>
+			table, th, td {
+			    border: 1px solid black;  /* 두께, 선종류, 선색상 */
+			    border-collapse: collapse; /* border 붙이기 */
+			}
+			
+			th, td {
+				padding: 15px;	/* 셀 안쪽의 컨텐트와 border 사이 여백 */
+			}
+			
+			th {
+				text-align: left;
+			}
+		</style>
 	</head>
-		
+	
 	
 	<body>
+		<table style="width: 100% ">
+			<tr>
+				<td colspan="2" width="65"> 1</td>
+				<td colspan="2" rowspan="2"> 3</td>
+				<td rowspan="3"> 5</td>
+			</tr>		
+			<tr>
+				<td colspan="2"> 1</td>
+			</tr>		
+			<tr>
+				<td colspan="2"> 1</td>
+				<td> 3</td>
+				<td> 4</td>
+			</tr>		
+		</table>
+		
+		<hr>
+		
+		<table style="width: 100%">
+			<tr>
+				<td colspan="2" rowspan="3"></td>
+				<td colspan="3"></td>
+			</tr>		
+			<tr>
+				<td colspan="2"></td>
+				<td></td>
+			</tr>		
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+		</table>
+		
+		<hr>
+		<table style="width: 100%">
+			<tr>
+				<td></td>
+				<td colspan="2" rowspan="2"></td>
+				<td rowspan="3"></td>
+			</tr>		
+			<tr>
+				<td></td>
+			</tr>		
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+		</table>
+		
+		<hr>
 	
 	</body>
 </html>
