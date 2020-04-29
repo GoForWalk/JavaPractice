@@ -6,19 +6,41 @@
 
 <style>
 div.static {
-	/* TODO */
+	border: 3px solid limegreen;
+	position: static;
+
 }
 
 div.relative {
-	/* TODO */
+	border: 3px solid orangered;
+	width: 400px;
+	position: relative;
+	left: 30px; /* 왼쪽으로 부터 30px */
+	/* right: -30px; */ /* 오른쪽으로부터 30px, 음수로 하면 반대방향으로 진행 */
+
+	/*top: 30px;*/ /* 위에서 부터 내려오는 방향 */
+	/*bottom: 30px */ /* 아래서 부터 올라가는 방향 */
+
+	/* 둘중에 하나 만 골라서 쓴다 */
+
 }
 
-div.fixed {
-	/* TODO */
+div.fixed { /* 스크린에서 고정된다!! 스크롤 내리면 따라서 움직인다*/
+	border: 3px solid blue;
+	width: 300px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+
 }
 
 div.absolute {
-	/* TODO */
+	border: 3px solid orchid;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: 40px;
+	right: 20px;
 }
 </style>
 
@@ -58,12 +80,12 @@ div.absolute {
 <h2>position: absolute</h2> <!-- 다음 2개 비교 -->
 <!--  부모가 relative, fixed, absolute 인 경우 -->
 <!-- TODO -->
-<div class="">부모1-relative
+<div class="relative">부모1-relative
 	<div class="absolute">absolute1</div>
 </div>
 
 <br>
-<!-- 부모가 static 인 경우 -->
+<!-- 부모가 static 인 경우 : body 를 대상으로 한다. -->
 <!-- TODO -->
 <div class="">부모2-static
 	<div class="absolute">absolute2</div>
@@ -74,6 +96,7 @@ div.absolute {
 
 
 <!-- 이번단원은 학생들도 아래 br 태그기입해주세요 -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
