@@ -23,25 +23,13 @@ public class Programmers_2 {
 
             if (n > 1) {
 
-                int temp = n - 1;
+                int[] arrSolution = solution(n - 1);
+                int nextArrLength = (arrSolution.length * 2) + 1;
 
-                for (int i = 1; i <= temp; i++) {
-
-//                    int middlePoint = (int) (Math.pow(2, i + 1)) / 2;
-                    int arrLength = (int) Math.pow(2, i) - 1;
-                    int nextArrLength = (int)Math.pow(2, i + 1) - 1;
-
-                    int[] arrSolution = new int[arrLength];
-
-                    for(int j = 0; j < arrLength; j++){
-                        arrSolution[j] = answer[j];
-                        answer[j] = arrSolution[j];
-                        answer[nextArrLength - 1 - j] = (arrSolution[j] - 1) * - 1;
-                    }
-
-//                    for (int j = 0; j > arrLength; j++) {
-//                    }
-
+                for(int j = 0; j < arrSolution.length; j++){
+                    answer[j] = arrSolution[j];
+//                    answer[j] = arrSolution[j];
+                    answer[nextArrLength - 1 - j] = (arrSolution[j] - 1) * - 1;
                 }
             }
             return answer;
