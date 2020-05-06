@@ -1,5 +1,7 @@
 package practice.soultion4;
 
+import java.util.*;
+
 public class Solution {
 
     public int[] solution(int[] answers) {
@@ -27,38 +29,30 @@ public class Solution {
         }
 
         int max = Math.max(cnt1, Math.max(cnt2, cnt3));
-        if(cnt1 == cnt2 && cnt1 == cnt3) {
-            answer = {1,2,3};
-        } else if (cnt1 == cnt2 || cnt1 == cnt3 || cnt2 == cnt3){
-            switch (max){
-                case cnt1:
 
+        ArrayList<Integer> list = new ArrayList<Integer>();
 
+        if(cnt1 == max) list.get(1);
+        if(cnt2 == max) list.get(2);
+        if(cnt3 == max) list.get(3);
 
+        Integer[] integers = new Integer[3];
 
-                        break;
-
-
-            }
+        for(Integer e : list){
+//           list.add(integers);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
         return answer;
     }
+
+//    public static List sortByValue(HashMap map){
+//
+//
+//
+//    }
 }
+
+
