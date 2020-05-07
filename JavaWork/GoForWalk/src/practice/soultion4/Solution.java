@@ -3,9 +3,14 @@ package practice.soultion4;
 import java.util.*;
 
 public class Solution {
+//    public static void main(String[] args) {
+//        Solution s = new Solution();
+//        int [] answers = {1,2,3,4,5};
+//        System.out.println(s.solution(answers));
+//    }
+
 
     public int[] solution(int[] answers) {
-        int[] answer = {};
 
         int [] stu1 = {1,2,3,4,5};
         int [] stu2 = {2,1,2,3,2,4,2,5};
@@ -20,8 +25,8 @@ public class Solution {
 
         for(int i = 0; i < answers.length; i++){
             stu1pattern[i] = stu1[i % stu1.length];
-            stu2pattern[i] = stu1[i % stu2.length];
-            stu1pattern[i] = stu1[i % stu3.length];
+            stu2pattern[i] = stu2[i % stu2.length];
+            stu3pattern[i] = stu3[i % stu3.length];
 
             if(stu1pattern[i] == answers[i]) cnt1++;
             if(stu2pattern[i] == answers[i]) cnt2++;
@@ -30,29 +35,27 @@ public class Solution {
 
         int max = Math.max(cnt1, Math.max(cnt2, cnt3));
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<String> list = new ArrayList<String>();
 
-        if(cnt1 == max) list.get(1);
-        if(cnt2 == max) list.get(2);
-        if(cnt3 == max) list.get(3);
+        if(cnt1 == max) list.add("1");
+        if(cnt2 == max) list.add("2");
+        if(cnt3 == max) list.add("3");
 
-        Integer[] integers = new Integer[3];
+        String [] strings = new String[list.size()];
 
-        for(Integer e : list){
-//           list.add(integers);
+        int i = 0;
+        for(String s : list){
+            strings[i] = s;
+            i++;
         }
+        int[] answer = new int[strings.length];
 
-
-
+        for(int j = 0; j < strings.length; j++){
+            answer[j] = Integer.parseInt(strings[j]);
+        }
 
         return answer;
     }
-
-//    public static List sortByValue(HashMap map){
-//
-//
-//
-//    }
 }
 
 
