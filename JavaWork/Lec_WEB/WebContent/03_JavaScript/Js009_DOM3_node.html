@@ -20,7 +20,7 @@ node type (종류) 와    nodeType 값
 
 JS 로 DOM 의 node 간 navigate 할수 있다.
 - parentNode
-- childNodes[nodenumber]
+- childNodes[nodenumber] 
 - firstChild
 - lastChild
 - nextSibling
@@ -35,26 +35,37 @@ JS 로 DOM 의 node 간 navigate 할수 있다.
 <p id="id02"></p>
 
 <script>
+document.getElementById('id02'). innerHTML = 
+// document.getElementById('id01').innerHTML;
+// document.getElementById('id01').firstChild.nodeValue;
+document.getElementById('id01').childNodes[0].nodeValue;
 
-// TODO
+// nodeValue 는
+// 	- Element node 의 nodeValue 는 undefined
+//  - Text node 의 nodeValue 는 text값
+//  - Attribute node 의 noveValue 는 attribute value
+
+
 
 </script>
 
 
 <br><hr>
 <h2>document.body</h2>
-<p onclick="TODO">클랙하면 body 의 컨텐츠가!</p>
+<p onclick="alert(document.body.innerHTML)">클랙하면 body 의 컨텐츠가!</p>
 
 
 <br><hr>
 <h2>document.documentElement</h2>
-<p onclick="TODO">클릭하면 document 의 컨텐츠가!</p>
+<p onclick="alert(document.documentElement.innerHTML)">클릭하면 document 의 컨텐츠가!</p>
 
 <br><hr>
 <h2>nodeType</h2>
 <p id="id03"></p>
 <script>
-// TODO
+document.getElementById('id03').innerHTML =
+	document.getElementById('id01').nodeType; // 1 : element node
+
 
 
 
@@ -71,9 +82,15 @@ JS 로 DOM 의 node 간 navigate 할수 있다.
 <!-- body elment node 의 child 들의 nodeName, nodeType, nodeValue  -->
 <p id="id04"></p>
 <script>
+var nodes = document.body.childNodes;
+var result = "";
 
-// TODO
+for(i = 0; i < nodes.length; i++){
+	var node = document.body.childNodes[i];
+	result += node.nodeName + " | " + node.nodeType + " | " + node.nodeValue + "<br>"
+}
 
+document.getElementById('id04').innerHTML = result;
 </script>
 
 <br><hr>
@@ -88,7 +105,12 @@ JS 로 DOM 의 node 간 navigate 할수 있다.
 <p id="id05"></p>
 <script>
 
-// TODO
+var attributes = document.getElementById('img01').attributes;
+var txt = "";
+
+for(i = 0; i < attributes.length; i++){
+	// TODO
+}
 
 </script>
 
