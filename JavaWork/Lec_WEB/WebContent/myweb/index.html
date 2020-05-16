@@ -6,7 +6,10 @@
     <title>MainPage</title>
 
     <link href="CSS/default.css" rel="stylesheet" type="text/css">
-
+    <script src="https://kit.fontawesome.com/bf05c7b177.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="JS/default.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
 
@@ -14,67 +17,230 @@
 </head>
 <body>
 
-    <div class="wrap">
-        <div class="header" role="banner">
+    <div id="wrap">
+        <div id="header" role="banner">
+            
+            <div id="login">
+                <a href="#" id="login_logo"><i class="fas fa-bars fa-2x"></i></a>
+            </div>
+            
             <div id="logo">
-                <div id="logoimg"></div>
+                <a href="http://127.0.0.1:5500/WebContent/myweb/index.html" >
+                    <img id="logo-img" src="img/logo1.png">
+                </a>
             </div>
-            <div id="search">
-                <div id="search_input"></div>
-                <div id="search_icon"></div>
+            <div class="clear"></div>
+
+            <nav id="menu">       
+                <ul id="menu_contianer">
+                    <li><a href="#" id="trade" class="menu_content4"><b>TRADE</b></a></li>
+                    <li><a href="#" id="watchlist" class="menu_content3"><b>WATCHLIST</b></a></li>
+                    <li><a href="#" id="search" class="menu_content2"><b>SEARCH</b></a></li>
+                    <li><a href="#" id="home" class="menu_content1"><b>HOME</b></a></li>
+                </ul>
+                
             </div>
-            <div id="main_icon">
-                <div id="main_icon_click"></div>
-            </div>
+            
         </div>
+        <div class="clear" id="blank1"></div>
 
 
 
-        <div class="container">
+        <div id="container_main">
             <div id="limitstock">
-                <div id="limitstock_title" class="title"></div>
+                <div id="limitstock_title" class="title"><h1>STEPS 한정상품</h1></div>
                 <div id="limit1">
-                    <div id="lim_img1" class="imgdis">
-                        <img>
-                        <div class="img_icon_star">
-                            <div class="star_icon_click"></div>
+
+
+                    <div id="prev" alt="Prev" title="Prev">			
+                        <div class="arrow-left"></div>
+                    </div>
+                    <div id="next" alt="Next" title="Next">
+                        <div class="arrow-right"></div>
+                    </div>
+        
+                <header>			
+                <div id="slider">
+
+                    <div class="slide" id="five">
+                        <div class="content">
+                            <h1 class="title">Calamity Jane</h1>
+                            <h5 class="by-line">by Jane Doe</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis ante ac elit placerat luctus. In vitae varius ante.</p>
+                            <button>Read More</button>
+                        </div>          
+
+                        <div class="container">
+                            <div class="kakao"></div>
+                        </div>	
+                    </div><!--/.slide-->
+
+                    <div class="slide" id="four">
+                        <div class="content">
+                            <h1 class="title">Calamity Jane</h1>
+                            <h5 class="by-line">by Jane Doe</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis ante ac elit placerat luctus. In vitae varius ante.</p>
+                            <button>Read More</button>
+                        </div>          
+
+                        <div class="container">
+                            <div class="megastudy"></div> 
+                        </div>	
+                    </div><!--/.slide-->
+
+                    <div class="slide" id="three">
+                        <div class="content">
+                            <h1 class="title">Calamity Jane</h1>
+                            <h5 class="by-line">by Jane Doe</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis ante ac elit placerat luctus. In vitae varius ante.</p>
+                            <button>Read More</button>
+                        </div>          
+
+                        <div class="container">
+                            <div class="samsungE"></div>
+                        </div>	
+                    </div><!--/.slide-->
+                    
+                    <div class="slide" id="two">
+                        <div class="content">
+                            <h1 class="title">The Lone <br>Ranger</h1>
+                            <h5 class="by-line">by Jane Doe</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis ante ac elit placerat luctus. In vitae varius ante.</p>
+                            <button>Read More</button>
+                        </div>          
+
+                        <div class="container">
+                            <div class="celltrion"></div>
+                        </div>	
+                    </div><!--/.Slide-->
+                </div><!--/.slider-->
+                </header>
+            </div>
+
+            <div class="clear" id="blank2"></div>
+
+            <div id="recommendfund">
+                <h1 id="fund_title"> 추천 테마</h1>
+                
+                <div class="carousel">
+                <a class="prev-btn" href="#">&lt;</a>
+                <div class="card" id="card1">
+                    <div class="card__title">
+                        <h3>COVID-19 진단 및 치료 추천 테마</h3>
+                    </div>
+                    <div class="card__descr"></div>
+                </div>
+
+                <div class="card" id="card2">
+                    <div class="card__title">
+                        <h3>비대면 서비스 및 5G 통신 추천 테마</h3>
+
+                    </div>
+                    <div class="card__descr"></div>
+                </div>
+
+                <div class="card" id="card3">
+                    <div class="card__title">
+                        <h3>친환경 운송수단 관련 테마</h3>
+
+                    </div>
+                    <div class="card__descr"></div>
+                </div>
+
+                <div class="card" id="card4">
+                    <div class="card__title">
+                        <h3>세계경제침체 관련 주목받는 금 실물거래</h3>
+
+                    </div>
+                    <div class="card__descr"></div>
+                </div>
+                <!-- <div class="card" id="card5"></div>
+                <div class="card" id="card6"></div> -->
+                <div class="card" id="card7">
+                    <div class="card__title">
+                        <h3>WTI 원유 선물거래</h3>
+
+                    </div>
+                    <div class="card__descr"></div>
+                </div>
+                <a class="next-btn" href="#">&gt;</a>
+                </div>
+                <div class="nav-elements">
+                    
+                </div>
+            </div>
+
+            <div class="clear" style="background-color: gainsboro;"></div>
+            
+            <div id="pf">
+                <h1>당신과 비슷한 성향</h1>
+                <div id="menu"></div>
+                <ul id="pf_ul">
+                    <div class="collapse">
+                        <li class="li_title, collapsible">
+                            <span class="open">+</span>
+                            <h4>삼성전자</h4>
+                            <span class="close">x</span>
+                        </li>
+                        <div class="pf_container">
+                            <p>Some collapsible content. Click the button to toggle between showing and hiding the collapsible content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                     </div>
-                    <div id="img_title" class="img_title">
-                        <div class="img_title_txt"></div>
-                        <div class="img_title_icon"></div>
+                   
+
+                    <div class="collapse">
+                    <li class="li_title" class="collapsible">
+                        <span class="open">+</span>
+                        <h4>셀트리온</h4>
+                        <span class="close">x</span>
+                    </li>
+                    <div class="pf_container"></div>
                     </div>
-                </div>
-                <div id="limit2"></div>
-            </div>
-            <div id="foryrpf"></div>
-            <div id="recommendfund"></div>
-            <div id="bestseller"></div>
-            <div id="pf">
-                <div id="menu"></div>
-                <table>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </table>
+
+                    <div class="collapse">
+                    <li class="li_title" class="collapsible">
+                        <span class="open">+</span>
+                        <h4>SK텔레콤</h4>
+                        <span class="close">x</span>
+                    </li>
+                    <div class="pf_container"></div>
+                    </div>
+
+                    <div class="collapse">
+                    <li class="li_title" class="collapsible">
+                        <span class="open">+</span>
+                        <h4>삼성전기</h4>
+                        <span class="close">x</span>
+                    </li>
+                    <div class="pf_container"></div>
+                    </div>
+
+                   <div class="collapse">
+                    <li class="li_title" class="collapsible">
+                        <span class="open">+</span>
+                        <h4>씨젠</h4>                       
+                        <span class="close">x</span>
+                    </li>
+                    <div class="pf_container"></div>
+                    </div>
+
+                   <div class="collapse">
+                    <li class="li_title" class="collapsible">
+                        <span class="open">+</span>
+                        <h4>하이닉스</h4>
+                        <span class="close">x</span>
+                    </li>
+                    <div class="pf_container"></div>
+                    </div>
+                    
+                </ul>
             </div>
         </div>
 
+        <div class="clear" id="blank3"></div>
 
 
-        <div class="footer"></div>
+        <div id="footer"></div>
 
     </div>
    
