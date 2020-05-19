@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="71cfc8da-f1a3-48c3-a890-f662902af3b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/myweb/CSS/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/myweb/CSS/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/myweb/JS/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/myweb/JS/default.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/myweb/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/myweb/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589354776445</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2020-05-16 practice">
+      <created>1589630653751</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589630653751</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,15 +82,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020-05-13 class final" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-05-13 class final" />
+    <MESSAGE value="2020-05-16 practice" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-05-16 practice" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589354778411">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589847343241">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1201.-1080.1920.1040@0.0.1920.1040" timestamp="1589847343241" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589630657001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1201.-1080.1920.1040@0.0.1920.1040" timestamp="1589354778411" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589630657001" />
   </component>
 </project>

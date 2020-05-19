@@ -511,7 +511,7 @@ h1 {
   transition: 0.4s;
 }
 
-.close {
+.close_btn {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -520,7 +520,7 @@ h1 {
   transform: translate(0%, -50%);
 }
 
-.open {
+.open_btn {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -531,7 +531,7 @@ h1 {
 
 
 
-.close:hover {
+.close_btn:hover {
   background-color: #bbbbbb;
 }
 
@@ -559,6 +559,44 @@ li h4 {
 
 /* candle chart */
 
+.chart-container h3{
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.chart-container h5 {
+  padding: 5px 0 10px 10px;
+}
+
+.chart-container div {
+  margin-left: 10px;
+}
+
+
+
+.chart-container div span {
+  display: inline-block;
+  width: auto;
+}
+
+.chart-container div span .date {
+  float: left;
+  font-weight: bolder; 
+  width: 200px;
+}
+
+.jqChart{
+  width: 60%;
+  height: auto;
+  min-height: 250px;
+  border-bottom: 20px;
+}
+
+.jqChartVolume {
+  width: 60%;
+  height: auto;
+  min-height: 130px;
+}
 
 
 
