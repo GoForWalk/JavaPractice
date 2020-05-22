@@ -59,7 +59,6 @@
 	
 	
 	 --%>
-	
 	<h3>person2</h3>
 	이름: <jsp:getProperty property="name" name="person2"/><br>
 	나이: <jsp:getProperty property="age" name="person2"/><br>

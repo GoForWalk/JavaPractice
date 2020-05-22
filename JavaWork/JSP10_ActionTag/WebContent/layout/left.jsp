@@ -28,8 +28,9 @@
       <h3>Side menu</h3>
       <p>Lorem ipsum dolor sit ame.</p>
       <ul class="nav nav-pills flex-column">
+      
         <li class="nav-item">
-          <a class="nav-link <%= (menu == 1)? "active" : "" %>" <%=(menu != 1) ? "href ='page.jsp?menu=1'" : "" %>>page1</a>
+          <a class="nav-link <%= (menu == 1)?"active":"" %>" <%=(menu != 1) ? "href ='page.jsp?menu=1'": "" %>>page1</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <%= (menu == 2)?"active":"" %>" <%=(menu != 2) ? "href ='page.jsp?menu=2'": "" %>>page2</a>
@@ -40,6 +41,7 @@
         <li class="nav-item">
           <a class="nav-link <%= (menu == 4)?"active":"" %>" <%=(menu != 4) ? "href ='page.jsp?menu=4'" : "" %>>page4</a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>

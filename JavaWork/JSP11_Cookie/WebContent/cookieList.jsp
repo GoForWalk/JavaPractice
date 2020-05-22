@@ -22,7 +22,7 @@
 			String cookieValue = cookies[i].getValue(); // 쿠키 '값'
 			out.println((i + 1) + "] " + cookieName + " : " + cookieValue + "<br>");
 		}
-		
+		  
 	} else {
 		
 		out.println("쿠키가 없습니다.<br>");
