@@ -1,0 +1,18 @@
+SET SESSION FOREIGN_KEY_CHECKS=0;
+
+/* Drop Tables */
+
+DROP TABLE IF EXISTS NEW_TABLE;
+
+
+
+
+/* Create Tables */
+
+CREATE TABLE NEW_TABLE
+(
+	dd date DEFAULT NOW(), SYSDATE() NOT NULL
+);
+
+
+

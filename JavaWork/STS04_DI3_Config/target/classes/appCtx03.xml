@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:annotation-config/>
+	
+	<!-- XML 파일에서 JAVA의 설정을 가져오기 -->
+	<bean class="com.lec.spring.config03.AppConfig03"/>
+		<!-- java 파일 안에 있는 Bean들을 모두 셋팅 -> score1 빈 생성 -->
+	
+	
+	<bean id="score2" class="com.lec.spring.bean.Score" 
+		c:kor="100" c:eng="90" c:comment="so good" c:math="80" />
+	
+</beans>
